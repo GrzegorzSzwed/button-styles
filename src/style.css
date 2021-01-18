@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.btn {
+  position: relative;
+  background-color: #fbfaff;
+  color: #292734;
+  padding: 1rem 0;
+  width: 10rem;
+  border-radius: 5px;
+  margin: 15px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0px 3.6px rgba(0, 0, 0, 0.024), 0 0px 10px rgba(0, 0, 0, 0.035),
+    0 0px 24.1px rgba(0, 0, 0, 0.046), 0 0px 80px rgba(0, 0, 0, 0.07);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.175rem;
+  background: #e9a106;
+  left: 0;
+  bottom: 0;
+}
+
+.btn-center::after {
+  transform: scale(0, 1);
+  transition: transform 0.3s ease;
+}
+
+.btn-center:hover::after {
+  transform: scale(1, 1);
+}
